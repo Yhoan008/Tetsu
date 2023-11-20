@@ -23,10 +23,10 @@ export default function Footer() {
           );
         })}
       </div>
-      <p className=" col-span-2 md:col-span-1 ">
+      <p className=" col-span-2 order-3 md:order-2 md:col-span-1 ">
         © 2022 Company name. All rights reserved
       </p>
-      <div className="flex gap-4 justify-start md:justify-end align-bottom  ">
+      <div className="flex gap-4 order-2 md:order-3 justify-start md:justify-end align-bottom  ">
         <li className="list-none underline">
           <a href="#">Terms Of Use</a>
         </li>

@@ -7,7 +7,7 @@ export default function Contact() {
       id="contacto"
     >
       <div className=" w-[70%] bg-[#bebebe] p-8 rounded-3xl ">
-        <h2 className="text-black font-bold text-4xl mb-5 ">Contactanos</h2>
+        <h2 className="text-black font-bold text-3xl mb-5 ">CONTACTO</h2>
         <form action="" className="grid grid-cols-2 gap-3 ">
           <label htmlFor="nombre" className="col-span-2 md:col-span-1 ">
             <Input name="nombre" place="Nombre" />

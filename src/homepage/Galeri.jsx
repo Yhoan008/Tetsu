@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import check from "./../assets/check.png";
 import gorroNegro from "./../assets/002.jpg";
 import saco from "./../assets/0001.jpg";
@@ -29,11 +30,11 @@ export default class Galeri extends Component {
               <Icon /> Economicos.
             </li>
           </ul>
-          <a href="/buy">
+          <Link to='/buy'>
             <button className="bg-[#383838] px-5 py-3 text-white hover:bg-[#555] ">
               Pide el tuyo
             </button>
-          </a>
+          </Link>
         </div>
         <div className="w-[100%] flex flex-col sm:flex-row ">
           <div className="w-[100%] sm:w-[50%] h-auto p-4 box-border">

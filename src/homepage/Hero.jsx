@@ -7,7 +7,7 @@ import power3 from "./../assets/power3.mp4";
 export default function Hero() {
   return (
     <div className="w-[100vw] h-auto bg-black p-[50px] mt-[50px]">
-      <div className="text-white flex justify-around flex-col md:flex-row   p-10 ">
+      <div className="text-white flex justify-around flex-col md:flex-row   p-2 ">
         <div className="max-w-[50%] ">
           <h1 className="font-extrabold text-5xl my-8">
             Sé imparable. Supera tus límites.
