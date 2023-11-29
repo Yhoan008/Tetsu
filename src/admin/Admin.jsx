@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AdminContext } from "../App";
+import { useNavigate } from "react-router-dom";
 
-export default function Admin() {
+function Admin(props) {
+  const { validadmin, setValidadmin } = useContext(AdminContext);
   const [user, setUser] = useState(null);
   const [pass, setPass] = useState(null);
+
+  const navigate = useNavigate();
 
   const changeuser = (event) => {
     setUser(event.target.value);
@@ -11,13 +16,14 @@ export default function Admin() {
     setPass(event.target.value);
   };
 
-  const validate = (event) => {
+  const validate = async(event) => {
     event.preventDefault();
     const data = {
       user: user,
       pass: pass,
     };
-    fetch("http://localhost:3000/validateAdmin", {
+
+    await fetch("http://localhost:3000/validateAdmin", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -26,8 +32,15 @@ export default function Admin() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-      }).catch(error=>{console.log(error)})
+        setValidadmin(data.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    if (validadmin) {
+      navigate("/admincontrol");
+    }
   };
 
   return (
@@ -35,7 +48,7 @@ export default function Admin() {
       className="mt-[90px] mb-10 w-[100%] h-auto flex justify-center items-center h-[60vh]"
       onSubmit={validate}
     >
-      <form className="w-[50%] p-4 gap-3 flex flex-col ">
+      <form className="w-[50%] p-4 gap-3 flex flex-col " action="/admin">
         <h1 className="font-bold ">Usuario:</h1>
         <input
           onChange={changeuser}
@@ -57,3 +70,5 @@ export default function Admin() {
     </div>
   );
 }
+
+export default Admin;

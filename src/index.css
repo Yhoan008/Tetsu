@@ -9,4 +9,17 @@ html {
 body{
   position:relative;
   min-height: 100vh;
+  overflow-x: hidden ;
+  padding-bottom: 140px;
+}
+
+@media screen and (max-width: 767px){
+  body{
+    padding-bottom: 200px;
+  }
+}
+@media screen and (max-width: 500px){
+  body{
+    padding-bottom: 300px;
+  }
 }

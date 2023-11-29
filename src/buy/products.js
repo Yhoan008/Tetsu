@@ -14,7 +14,7 @@ export const products = [
         id: 0,
         img: gorroNegroSW,
         title:"Gorro negro SW",
-        description:"Gorro negro comoda y de calidad con logo Street Workout",
+        description:"Su diseño atemporal y ajuste cómodo lo convierten en el accesorio perfecto para cualquier ocasión.",
         precio:"$12.000"
     },
     {
