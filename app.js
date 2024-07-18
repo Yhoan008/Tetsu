@@ -18,7 +18,10 @@ app.listen(port, () => {
 });
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGODB_URI,{
+    useNewUrlParcer: true,
+    useUnifiedTopology : true
+  })
   .then(() => {
     console.log("Connect to Mongo DB");
   })
